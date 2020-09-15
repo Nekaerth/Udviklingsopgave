@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Opgave4
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -23,7 +23,7 @@ namespace Opgave4
                 Console.Write(i);
         }
 
-        static string ReverseString(string s)
+        public static string ReverseString(string s)
         {
             var reversed = "";
             for (int i = s.Length - 1; i >= 0; i--)
@@ -31,13 +31,13 @@ namespace Opgave4
             return reversed;
         }
 
-        static bool IsPalindrome(string s)
+        public static bool IsPalindrome(string s)
         {
             s = s.ToLower();
             return s == ReverseString(s);
         }
 
-        static IEnumerable<int> MissingElements(int[] arr)
+        public static IEnumerable<int> MissingElements(int[] arr)
         {
             var sorted = arr.OrderBy(x => x).Distinct().ToArray();
             var missing = new List<int>();
